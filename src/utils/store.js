@@ -1,16 +1,11 @@
 import * as React from 'react'
-import { useLocalStore, useObserver } from 'mobx-react-lite'
-import makeInspectable from 'mobx-devtools-mst';
+import { useObserver } from 'mobx-react-lite'
 
-import { getDefaultStore } from "../models/root";
+import { store } from "../models/root";
 
 export const storeContext = React.createContext(null)
 
 export const StoreProvider = ({ children }) => {
-  const store = useLocalStore(getDefaultStore)
-  makeInspectable(store)
-
-
   return (
     <storeContext.Provider value={store}>
       {children}

@@ -5,9 +5,9 @@ import { useCounterStore } from "../utils/store";
 const CounterView = ({ counter, count }) => {
   return (
     <div>
-      <span className="btn" onClick={() => counter.dec()}>-</span>
+      <span className="btn" onClick={() => dec()}>-</span>
       <span className="counter-label">{count}</span>
-      <span className="btn" onClick={() => counter.inc()}>+</span>
+      <span className="btn" onClick={() => inc()}>+</span>
     </div>
   )
 }
@@ -15,7 +15,8 @@ const CounterView = ({ counter, count }) => {
 export default () => {
   const counter = useCounterStore(store => ({
     count: store.count,
-    counter: store
+    inc: store.inc,
+    dec: store.dec,
   }))
   return <CounterView {...counter} />
 }
