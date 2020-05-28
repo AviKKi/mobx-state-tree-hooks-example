@@ -2,7 +2,7 @@ import React from 'react'
 import { useCounterStore } from "../utils/store";
 
 
-const CounterView = ({ counter, count }) => {
+const CounterView = ({ dec, inc, count }) => {
   return (
     <div>
       <span className="btn" onClick={() => dec()}>-</span>
