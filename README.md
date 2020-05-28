@@ -3,8 +3,8 @@
 This code demonstrates use of mobx-state-tree with mobx-react-lite.
 
 Todo - 
-- [ ] Setup Project Architecture
-- [ ] Couter example
+- [x] Setup Project Architecture
+- [x] Couter example
 - [ ] Wishlist example
 - [ ] Persistance
 
